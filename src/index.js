@@ -1,14 +1,17 @@
-const express = require('express')
+const express = require('express');
 const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
 
-const port = 5050
-const app = express()
+const mongoAddress = 'mongodb+srv://ccmoura:12345@cluster0-bg927.mongodb.net/test?retryWrites=true&w=majority';
+const port = 5050;
+const app = express();
+app.use(bodyParser.json());
+
 app.use(require('./routes'));
-
-mongoose.connect('mongodb+srv://ccmoura:mongopass@cluster0-nfkpt.mongodb.net/test?retryWrites=true&w=majority', {
+mongoose.connect(mongoAddress, {
     useNewUrlParser: true,
 });
 
 app.listen(port, () =>{
-    console.log(`Server running: http://localhost:${port}\n`)
+    console.log(`Server running: http://localhost:${port}\n`);
 })

@@ -4,7 +4,7 @@ module.exports = {
     async index(req, res) {
         user.find()
         .then((rows) =>{
-            res.render('index', {users: rows});
+            res.json(rows);
         });
     },
 
