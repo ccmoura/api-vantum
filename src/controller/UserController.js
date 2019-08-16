@@ -17,11 +17,12 @@ module.exports = {
         }
         let data = new user(row);
         data.save();
+        res.send(data)
     },
 
     async findUserById(req, res){
         let id = req.body.id;
-        users.findById(id, function(err, row) {
+        user.findById(id, function(err, row) {
             if (err) res.send(`User ${id} not found.`);
             res.send(row)
         });
@@ -29,13 +30,13 @@ module.exports = {
 
     async putUserById(req, res){
         let id = req.body.id;
-        users.findById(id, function(err, row) {  
+        user.findById(id, function(err, row) {  
             if (err) res.send(`User ${id} not found.`); 
 
             row.nome = req.body.nome;  
             row.email = req.body.email;  
             row.telefone = req.body.telefone;  
-            row.endereco = req.body.endereco;  
+            row.endereco = req.body.endereco; 
             row.save();  
         })  
         res.send(`User ${id} successfully changed`);
@@ -43,7 +44,7 @@ module.exports = {
     
     async remove(req, res){
         let id = req.body.id;
-        Contatos.findByIdAndRemove(id).exec();
+        user.findByIdAndRemove(id).exec();
         res.send(`User ${id} removed.`);
     },
 

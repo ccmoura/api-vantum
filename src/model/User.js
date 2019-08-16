@@ -5,6 +5,6 @@ let userSchema = new mongoose.Schema({
     email: {type: String, required: true}, 
     telefone: {type: String, required: true}, 
     endereco: {type: String, required: true}, 
-}, {collection: 'users'}); 
+}); 
    
 module.exports = mongoose.model('User', userSchema);  
