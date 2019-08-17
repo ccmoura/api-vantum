@@ -2,6 +2,7 @@
 
 Teste para estágio de desenvolvimento na Vantum utilizando Nodejs, MongoDB e MVC.
 
+
 ### Tecnologias utilizadas no desenvolvimento
 
 * Visual Studio Code - https://code.visualstudio.com
@@ -9,12 +10,14 @@ Teste para estágio de desenvolvimento na Vantum utilizando Nodejs, MongoDB e MV
 * Mongo DB Atlas - https://www.mongodb.com/cloud/atlas
 * Yarn - https://yarnpkg.com/en/
 
+
 ### Dependências
 
 * body-parser - yarn add body-parser
 * express - yarn add express
 * mongoose - yarn add mongoose
 * nodemon - yarn add nodemon
+
 
 ### Executando
 
@@ -26,6 +29,7 @@ Executar
 ```
   > node index.js
 ```
+
 ### Rotas
 
 ```javascript
