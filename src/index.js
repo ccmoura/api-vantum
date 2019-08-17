@@ -10,6 +10,7 @@ app.use(bodyParser.json());
 app.use(require('./routes'));
 mongoose.connect(mongoAddress, {
     useNewUrlParser: true,
+    useFindAndModify: false
 });
 
 app.listen(port, () =>{
