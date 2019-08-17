@@ -1,6 +1,6 @@
 # Teste Vantum
 
-Teste para estágio de desenvolvimento na Vantum.
+Teste para estágio de desenvolvimento na Vantum utilizando Nodejs, MongoDB e MVC.
 
 ### Tecnologias utilizadas no desenvolvimento
 
