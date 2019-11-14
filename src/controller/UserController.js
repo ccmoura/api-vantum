@@ -23,7 +23,7 @@ module.exports = {
     
     async remove(req, res){
         await user.findByIdAndRemove(req.params.id).exec();
-        return res.send(`User ${req.params.id} removed.`);
+        return res.json({message: `User ${req.params.id} removed.`});
     },
 
 }
